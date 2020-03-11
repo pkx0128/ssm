@@ -22,9 +22,9 @@ public class UsersServiceImpl implements UsersService {
      */
     @Override
     public List<Users> findAll() {
-        usersDao.findAll();
+//        usersDao.findAll();
         System.out.println("UserServiceImpl类的findAll方法执行了。。。");
-        return null;
+        return usersDao.findAll();
     }
 
     /**

@@ -4,6 +4,7 @@ import com.pankx.domain.Users;
 import com.pankx.service.UsersService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
@@ -29,13 +30,16 @@ public class UsersController {
     }
 
     /**
-     *
+     *测试mybatis环境
      * @return
      */
     @RequestMapping("/testfindAll")
-    public String testfindAll(){
+    public String testfindAll(Model model){
         System.out.println("UsersController类的testfindAll方法执行了");
-        usersService.findAll();
-        return "list";
+        //查询所有用信息
+        List<Users> list = usersService.findAll();
+        //把数据存入Model
+        model.addAttribute("userslist",list);
+        return "userslist";
     }
 }
