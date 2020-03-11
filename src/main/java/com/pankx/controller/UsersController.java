@@ -7,6 +7,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 import java.util.List;
 
 /**
@@ -41,5 +45,16 @@ public class UsersController {
         //把数据存入Model
         model.addAttribute("userslist",list);
         return "userslist";
+    }
+
+    /**
+     * 保存
+     * @param users
+     */
+    @RequestMapping("/testsave")
+    public String testsave(Users users){
+        System.out.println("testsave执行了。。。。");
+        usersService.saveUser(users);
+        return "success";
     }
 }

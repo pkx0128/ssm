@@ -14,5 +14,6 @@
     <h1>测试Spring整合MyBatis</h1>
     <hr/>
     <a href="user/testfindAll">测试Spring整合MyBatis</a>
+
 </body>
 </html>

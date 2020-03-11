@@ -12,6 +12,8 @@
     <title>所有用户信息</title>
 </head>
 <body>
+<h1>所有用户信息如下</h1>
+<hr/>
     <c:forEach items="${userslist}" var="user">
         ${user}<br/>
     </c:forEach>
