@@ -14,6 +14,7 @@
     <h1>测试SpringMVC环境</h1>
     <hr/>
     <a href="user/testSpringmvc">测试SpringMVC环境</a>
+    <hr/>
     <a href="user/testfindAll">测试Spring整合SpringMVC环境</a>
 </body>
 </html>

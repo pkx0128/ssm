@@ -1,6 +1,8 @@
 package com.pankx.dao;
 
 import com.pankx.domain.Users;
+import org.apache.ibatis.annotations.Insert;
+import org.apache.ibatis.annotations.Select;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -14,11 +16,13 @@ public interface UsersDao {
      * 查询所有用户
      * @return
      */
+    @Select("SELECT * FROM users")
     public List<Users> findAll();
 
     /**
      * 添加用户
      * @param users
      */
+    @Insert("INSERT INTO users (username,password) VALUES(#{userName},#{password})")
     public void saveUser(Users users);
 }
